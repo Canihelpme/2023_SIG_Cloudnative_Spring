@@ -53,6 +53,20 @@
                └─ SingletonTest.java
 ```
 
+### 실행 방법
+#### Eclipse
+Eclipse의 경우 IDE 차이로 현재 불가능.
+
+#### IntelliJ
+git bash 혹은 Terminal, IntelliJ Terminal 에서 진행하시면 됩니다.
+
+- mkdir 원하는 폴더 이름
+- cd 원하는 폴더
+- git init
+- git remote add (현재 github 주소) (원하는 remote 이름)
+- git pull (원하는 remote 이름) main
+- Settings -> Build,Excecution,Deployment -> Build tools -> Gradle 로 이동 후, Build and run using과 Run tests using을 IntelliJ IDEA로 변경 하시면 됩니다.
+
 ### Spring 1주차
 - Spring Framework란?
   - https://dhtechblog.notion.site/Spring-Framework-2adee5e5c4834e098ce321119d6c4c4b
