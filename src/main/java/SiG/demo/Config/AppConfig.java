@@ -11,10 +11,13 @@ import SiG.demo.UserService.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+/**
+ * Java Configuration 방식으로 Bean 등록
+ */
+@Configuration //Configuration Annotation 을 통해 Spring이 설정 파일을 참조 할 수 있도록 선언
 public class AppConfig {
 
-    @Bean
+    @Bean //Bean annotation 으로 Spring에게 Bean으로 등록해달라고 요청
     public PasswordEncoder passwordEncoder() {
         return new EnforcedEncoder();
     }

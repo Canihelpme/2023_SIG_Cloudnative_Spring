@@ -8,7 +8,9 @@ import SiG.demo.Repository.UserRepository;
 import SiG.demo.UserService.UserService;
 import SiG.demo.UserService.UserServiceImpl;
 
-
+/**
+ * 순수하게 Java Code만을 이용하여 의존 연관 관계 생성 방식
+ */
 public class PureJavaConfig {
 
     public PasswordEncoder passwordEncoder() {

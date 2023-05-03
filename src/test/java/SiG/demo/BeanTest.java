@@ -14,7 +14,8 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class ApplicationContextInfoTest {
+
+public class BeanTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -64,13 +65,14 @@ public class ApplicationContextInfoTest {
     void findBeanByImpl() {
         UserServiceImpl userService = ac.getBean("userService", UserServiceImpl.class);
         assertThat(userService).isInstanceOf(UserServiceImpl.class);
-    } //bean의 타입을 결정할 때 꼭 반환되는 것의 타입을 보고 결정하기 때문에, 인터페이스가 아니더라도 구현체로도 조회가 가능하다.
-      // 물론 구체에 의존하는 것은 좋지 않다...
+    } //bean의 타입을 결정할 때 꼭 반환되는 것의 타입을 보고 결정하기 때문에, 인터페이스가 아니더라도 구현체로도 조회가 가능합니다.
+      // 물론 구체에 의존하는 것은 좋지 지양해야 합니다...
 
     @Test
     @DisplayName("빈 이름으로 조회했는데 없다면?!?!?")
     void findBeanByNameX() {
-        //UserService xxxx = ac.getBean("xxxx", UserService.class); NoSuchBeanDefinitionException 발생
+        //아래 주석 제거 후 돌려보세요
+        //UserService xxxx = ac.getBean("xxxx", UserService.class); // NoSuchBeanDefinitionException 발생
         org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxx", UserService.class));
     }

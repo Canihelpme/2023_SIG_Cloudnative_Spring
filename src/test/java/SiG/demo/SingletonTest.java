@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SingletonTest {
 
     @Test
-    @DisplayName("순수한 자바 Config 파일")
+    @DisplayName("순수한 자바 Config 파일을 통해 객체를 생성 했을 때 인스턴스의 불일치 확인")
     void pureJavaDependency() {
         PureJavaConfig pureJavaConfig = new PureJavaConfig();
 
@@ -28,6 +28,7 @@ public class SingletonTest {
         //실제 참조값이 다른 것을 확인(메모리의 다른 장소에 저장되었다는 것!!!)
         System.out.println("userService = " + userService);
         System.out.println("userService1 = " + userService1);
+        assertThat(userService).isNotSameAs(userService1);
     }
 
     @Test
@@ -42,11 +43,13 @@ public class SingletonTest {
         UserService userService1 = appConfig.userService();
 
         //실제 참조값이 다른 것을 확인(메모리의 다른 장소에 저장되었다는 것!!!)
+        System.out.println("메모리 참조값이 일치하는지 불일치하는지 확인");
         System.out.println("userService = " + userService);
         System.out.println("userService1 = " + userService1);
+        assertThat(userService).isNotSameAs(userService1);
     }
 
-     @Test
+    @Test
     @DisplayName("싱글톤 패턴 테스트")
     void SingletonTest() {
 
@@ -60,25 +63,10 @@ public class SingletonTest {
     }
 
     @Test
-    @DisplayName("싱글톤 패턴 테스트 2")
-    void SingletonTest2() {
-
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        //ApplicationContext 인터페이스를 통해 Bean 호출
-
-        UserService userService = applicationContext.getBean("userService", UserService.class);
-        UserService userService1 = applicationContext.getBean("userService", UserService.class);
-
-        System.out.println("첫 번째 UserService = " + userService);
-        System.out.println("두 번째 UserService = " + userService1);
-        assertThat(userService).isSameAs(userService1);
-
-    }
-
-    @Test
     @DisplayName("스프링 컨테이너와 싱글톤")
     void springContainer() {
 
+        //ApplicationContext 인터페이스를 통해 Bean 호출
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
         UserService userService = ac.getBean("userService", UserService.class);
