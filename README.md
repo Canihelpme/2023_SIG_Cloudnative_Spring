@@ -66,8 +66,9 @@ git bash 혹은 Terminal, IntelliJ Terminal 에서 진행하시면 됩니다.
 - git init
 - git remote add (현재 github 주소) (원하는 remote 이름)
 - git pull (원하는 remote 이름) main
-- Settings -> Build,Excecution,Deployment -> Build tools -> Gradle 로 이동 후, Build and run using과 Run tests using을 IntelliJ IDEA로 변경 하시면 됩니다.
-- 
+- Settings -> Build,Excecution,Deployment -> Build tools -> Gradle 로 이동 후, 
+  Build and run using과 Run tests using을 IntelliJ IDEA로 변경 하시면 됩니다.
+
 ```
 ### Spring 1주차
 - Spring Framework란?
