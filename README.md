@@ -55,7 +55,7 @@
 
 ### 실행 방법
 #### Eclipse
-Eclipse의 경우 IDE 차이로 현재 불가능.
+Eclipse의 경우 IDE 차이로 현재 불가능. 추후 Update 하겠습니다.
 
 #### IntelliJ
 ```
