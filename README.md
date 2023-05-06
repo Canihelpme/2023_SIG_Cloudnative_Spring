@@ -70,7 +70,7 @@ git bash 혹은 Terminal, IntelliJ Terminal 에서 진행하시면 됩니다.
   Build and run using과 Run tests using을 IntelliJ IDEA로 변경 하시면 됩니다.
 ```
 
-git pull 혹은 remote 저장소 등록 시 아래의 사진처럼 Code 클릭 후 주소를 복사하면 됩니다. 
+### git pull 혹은 remote 저장소 등록 시 아래의 사진처럼 Code 클릭 후 주소를 복사하면 됩니다. 
 <img src="img/Git pull.png">
 
 ### Spring 1주차
