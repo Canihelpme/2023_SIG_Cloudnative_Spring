@@ -2,72 +2,23 @@
 
 ### 매주 진행한 코드를 올리는 저장소 입니다
 
-### 프로젝트 구조
-```
-📦 
-├─ .gitignore
-├─ README.md
-├─ build.gradle
-├─ gradle
-│  └─ wrapper
-│     ├─ gradle-wrapper.jar
-│     └─ gradle-wrapper.properties
-├─ gradlew
-├─ gradlew.bat
-├─ settings.gradle
-└─ src
-   ├─ Description.md
-   ├─ main
-   │  ├─ java
-   │  │  └─ SiG
-   │  │     └─ demo
-   │  │        ├─ Config
-   │  │        │  ├─ AppConfig.java
-   │  │        │  └─ PureJavaConfig.java
-   │  │        ├─ DemoApplication.java
-   │  │        ├─ EncodeUtil
-   │  │        │  ├─ EnforcedEncoder.java
-   │  │        │  ├─ PasswordEncoder.java
-   │  │        │  ├─ SimpleEncoder.java
-   │  │        │  └─ SimplePasswordEncoder.java
-   │  │        ├─ Entity
-   │  │        │  └─ User.java
-   │  │        ├─ Repository
-   │  │        │  ├─ Memory2UserRepository.java
-   │  │        │  ├─ MemoryUserRepository.java
-   │  │        │  └─ UserRepository.java
-   │  │        ├─ SingletonApplication.java
-   │  │        └─ UserService
-   │  │           ├─ SingletonService.java
-   │  │           ├─ UserModifyService.java
-   │  │           ├─ UserModifyServiceImpl.java
-   │  │           ├─ UserService.java
-   │  │           └─ UserServiceImpl.java
-   │  └─ resources
-   │     └─ application.yml
-   └─ test
-      └─ java
-         └─ SiG
-            └─ demo
-               ├─ BeanTest.java
-               └─ SingletonTest.java
-```
-
 ### 실행 방법
 #### Eclipse
 Eclipse의 경우 IDE 차이로 현재 불가능. 추후 Update 하겠습니다.
 
 #### IntelliJ
+
 ```
 git bash 혹은 Terminal, IntelliJ Terminal 에서 진행하시면 됩니다.
 
 - mkdir (원하는 폴더 이름)
 - cd (원하는 폴더 이름)
 - git init
-- git remote add (현재 github 주소) (원하는 remote 이름)
-- git pull (원하는 remote 이름) main
+- git clone (현재 github 주소) (원하는 remote 이름)
 - Settings -> Build,Excecution,Deployment -> Build tools -> Gradle 로 이동 후, 
   Build and run using과 Run tests using을 IntelliJ IDEA로 변경 하시면 됩니다.
+- InelliJ에서는 현재 한번에 여러개의 프로젝트를 Running 하는 것이 불가능하므로, week1, week2 등 원하는 주차의 프로젝트만 열어서
+  구동하시길 바랍니다.
 ```
 
 ### git pull 혹은 remote 저장소 등록 시 아래의 사진처럼 Code 클릭 후 주소를 복사하면 됩니다. 
